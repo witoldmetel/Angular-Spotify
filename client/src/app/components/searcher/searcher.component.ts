@@ -15,27 +15,15 @@ export class SearcherComponent implements OnInit {
 
   searchMusic() {
     let spotify = new SpotifyWebApi();
-    spotify.setAccessToken('BQA8ptD820nFFaqj08SNLtw8HhoJD7nc7sR7cK1JEfTXGhJXqQByFDF3yP7d-XKQivvbIMaL6tuSpI8qPD2WHJ2kJ3ELBzMMZNMCogCsIpodIrTHiKl2psaDs1ih9wmjAGnUd88GSCJoSIT8MIxTgOWMlIjRi52CXEjD');
+    spotify.setAccessToken('BQD7BdJGm3lZ2Fezzln3o1gXdUVeKdHhZ_lNig1Yr9u7NYdLLptGsknzKvMhglIcfnbYAYnMRdKJlyX4aYQOC09JRH9tpi8dfzE_oUKOYodT-K9MwuKc-juOwia8156re5Fq03zimVR_blTQ-pMwZv1hEWSk5H4ntrhO');
     spotify.searchArtists(this.searcher, { limit: 5 })
       .then(res => {
-        console.log(res.artists.items);
+          // console.log(res.artists.items);
           this.searchRes = res.artists.items
       })
       .catch(err => console.error(err));
   }
 
-  // getArtist() {
-  //   let spotify = new SpotifyWebApi();
-  //   spotify.setAccessToken('BQA8ptD820nFFaqj08SNLtw8HhoJD7nc7sR7cK1JEfTXGhJXqQByFDF3yP7d-XKQivvbIMaL6tuSpI8qPD2WHJ2kJ3ELBzMMZNMCogCsIpodIrTHiKl2psaDs1ih9wmjAGnUd88GSCJoSIT8MIxTgOWMlIjRi52CXEjD');
-  //   spotify.getArtist('2hazSY4Ef3aB9ATXW7F5w3')
-  //     .then(function (data) {
-  //       console.log('Artist information', data);
-  //     }, function (err) {
-  //       console.error(err);
-  //     });
-
-  // }
-  
   ngOnInit() {
   }
 
