@@ -9,13 +9,15 @@ import { AboutComponent } from './components/about/about.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ArtistComponent } from './components/artist/artist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearcherComponent
+    SearcherComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,18 @@ export class SearcherComponent implements OnInit {
       .catch(err => console.error(err));
   }
 
+  // getArtist() {
+  //   let spotify = new SpotifyWebApi();
+  //   spotify.setAccessToken('BQA8ptD820nFFaqj08SNLtw8HhoJD7nc7sR7cK1JEfTXGhJXqQByFDF3yP7d-XKQivvbIMaL6tuSpI8qPD2WHJ2kJ3ELBzMMZNMCogCsIpodIrTHiKl2psaDs1ih9wmjAGnUd88GSCJoSIT8MIxTgOWMlIjRi52CXEjD');
+  //   spotify.getArtist('2hazSY4Ef3aB9ATXW7F5w3')
+  //     .then(function (data) {
+  //       console.log('Artist information', data);
+  //     }, function (err) {
+  //       console.error(err);
+  //     });
+
+  // }
+  
   ngOnInit() {
   }
 
