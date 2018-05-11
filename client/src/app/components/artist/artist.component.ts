@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as SpotifyWebApi from 'spotify-web-api-js';
 import { ActivatedRoute } from '@angular/router';
+import { accessToken } from '../../model/AccessToken';
 
 @Component({
   selector: 'app-artist',
@@ -8,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent implements OnInit {
+  accessToken: string;
   id: string;
   artist: any;
   albums: any;
@@ -16,7 +18,7 @@ export class ArtistComponent implements OnInit {
 
   ngOnInit() {
     let spotify = new SpotifyWebApi();
-    spotify.setAccessToken('BQBc9o1CRYF8kn3UwZQvOQ33G4Ce4JEm_30AD34QHbnQqLfC-MyqxPXYpDR0Ewmj4ruq6LHz5CSun_GmlENjA6ENxs1zaYGlCTtjTVmdvCqzs7PgS04edW_YqXsYCZHuHDHhY5zgWC57rRCg9UWQclNDZI6XCZhYwTNo');
+    spotify.setAccessToken(accessToken);
 
     this.route.params
       .subscribe(params => {

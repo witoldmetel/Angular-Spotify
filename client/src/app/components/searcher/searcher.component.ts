@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as SpotifyWebApi from 'spotify-web-api-js';
 // import { Artist } from '../../../../Artist';
+import { accessToken } from '../../model/AccessToken';
 
 @Component({
   selector: 'app-searcher',
@@ -8,6 +9,7 @@ import * as SpotifyWebApi from 'spotify-web-api-js';
   styleUrls: ['./searcher.component.css']
 })
 export class SearcherComponent implements OnInit {
+  accessToken: string;
   searcher: string;
   searchRes: any;
 
@@ -15,7 +17,7 @@ export class SearcherComponent implements OnInit {
 
   searchMusic() {
     let spotify = new SpotifyWebApi();
-    spotify.setAccessToken('BQBc9o1CRYF8kn3UwZQvOQ33G4Ce4JEm_30AD34QHbnQqLfC-MyqxPXYpDR0Ewmj4ruq6LHz5CSun_GmlENjA6ENxs1zaYGlCTtjTVmdvCqzs7PgS04edW_YqXsYCZHuHDHhY5zgWC57rRCg9UWQclNDZI6XCZhYwTNo');
+    spotify.setAccessToken(accessToken);
     spotify.searchArtists(this.searcher, { limit: 5 })
       .then(res => {
           // console.log(res.artists.items);
