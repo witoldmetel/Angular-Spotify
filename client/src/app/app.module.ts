@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
-import { ArtistComponent } from './components/artist/artist.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,8 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearcherComponent,
-    ArtistComponent
+    SearcherComponent
   ],
   imports: [
     BrowserModule,
