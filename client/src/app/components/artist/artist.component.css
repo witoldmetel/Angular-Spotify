@@ -1,0 +1,25 @@
+.artist-header {
+    padding: 20px;
+}
+
+.artist-thumb {
+    width: 80px;
+    height: auto;
+}
+
+.container {
+  background: #f9f9f9;
+}
+
+.flex-column {
+  max-width: 260px;
+}
+
+img {
+  margin: 5px;
+}
+
+.scale {
+  transform: scaleY(1.05);
+  padding-top: 5px;
+}

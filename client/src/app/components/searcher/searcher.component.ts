@@ -15,7 +15,7 @@ export class SearcherComponent implements OnInit {
 
   searchMusic() {
     let spotify = new SpotifyWebApi();
-    spotify.setAccessToken('BQD7BdJGm3lZ2Fezzln3o1gXdUVeKdHhZ_lNig1Yr9u7NYdLLptGsknzKvMhglIcfnbYAYnMRdKJlyX4aYQOC09JRH9tpi8dfzE_oUKOYodT-K9MwuKc-juOwia8156re5Fq03zimVR_blTQ-pMwZv1hEWSk5H4ntrhO');
+    spotify.setAccessToken('BQBc9o1CRYF8kn3UwZQvOQ33G4Ce4JEm_30AD34QHbnQqLfC-MyqxPXYpDR0Ewmj4ruq6LHz5CSun_GmlENjA6ENxs1zaYGlCTtjTVmdvCqzs7PgS04edW_YqXsYCZHuHDHhY5zgWC57rRCg9UWQclNDZI6XCZhYwTNo');
     spotify.searchArtists(this.searcher, { limit: 5 })
       .then(res => {
           // console.log(res.artists.items);

@@ -2,7 +2,7 @@
 
 ## App Info
 
-Spotify Searcher App (First App in Angular / Bootswatch)
+Spotify Searcher App (First App in Angular / Bootstrap)
 
 ## Quick Start
 
