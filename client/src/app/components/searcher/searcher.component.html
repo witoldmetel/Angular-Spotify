@@ -5,22 +5,20 @@
     <input type="text" name="searcher" [(ngModel)]="searcher" (keyup)="searchMusic()" class="form-control" placeholder="Search Music...">
   </div>
 </form>
-<a href="http://localhost:8888">
-  <button>Log to Spotify</button>
-</a>
-
+<hr>
 <div *ngIf='searchRes'>
-  <div *ngFor="let res of searchRes">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card text-white bg-primary mb-3 search-res well" style="max-width: 20rem;">
-          <div class="card-header"><a routerLink="/artist/{{res.id}}">{{res.name}}</a></div>
-          <div class="card-body" *ngIf="res.genres.length > 0">
-            <h6 class="card-title">Genres: </h6>
-            <span *ngFor="let genre of res.genres; let i = index">
-              <p class="card-text" *ngIf="i < 3">{{genre}}</p>
+  <div class="row">
+    <div class="col-md-12 responsive-column">
+      <div *ngFor="let res of searchRes">
+        <div class="column col-sm-3 col-xs-4">
+          <a routerLink="/artist/{{res.id}}" class="list-group-item clearfix">
+            <span class="pull-left">
+              <h5 class="list-group-item-heading">{{res.name}}</h5>
             </span>
-          </div>
+            <span class="pull-right" *ngIf="res.images.length > 0">
+              <img src="{{res.images[0].url}}" alt="artist-picture" class="img-responsive img-circle">
+            </span>
+          </a>
         </div>
       </div>
     </div>

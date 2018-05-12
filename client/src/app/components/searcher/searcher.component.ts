@@ -18,7 +18,7 @@ export class SearcherComponent implements OnInit {
   searchMusic() {
     let spotify = new SpotifyWebApi();
     spotify.setAccessToken(accessToken);
-    spotify.searchArtists(this.searcher, { limit: 5 })
+    spotify.searchArtists(this.searcher, { limit: 40 })
       .then(res => {
           // console.log(res.artists.items);
           this.searchRes = res.artists.items

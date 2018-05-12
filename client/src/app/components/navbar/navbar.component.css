@@ -1,0 +1,17 @@
+.navbar-default {
+    color: rgb(255, 67, 49);
+    background-color: rgb(245, 231, 44);
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon-bar {
+    margin-right: 0.5rem;
+}
+
+.navbar-brand {
+    color: red;
+}
