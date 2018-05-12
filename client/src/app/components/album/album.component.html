@@ -1,3 +1,21 @@
-<p>
-  Check this out
-</p>
+<div *ngIf="album">
+  <header class="album-header">
+    <div *ngIf="album.images.length > 0">
+        <img src="{{album.images[0].url}}" alt="{{album.name}}-thumbnail" class="album-thumb pull-left">
+    </div>
+    <h1>{{album.name}}</h1>
+    <h5>Release date: {{album.release_date}}</h5>
+    <a class="btn btn-primary btn-yellow" href="{{album.external_urls.spotify}}" target="_blank">Check this album in Spotify!</a>
+  </header>
+  <hr>
+  <div class="album-tracks">
+    <h2>Album tracks</h2>
+    <div *ngFor="let track of album.tracks.items">
+      <div class="well">
+        <h4>{{track.track_number}} - {{track.name}}</h4>
+        <a href="{{track.external_urls.spotify}}" target="_blank">Check this out!</a>
+        <!-- <p class="duration pull-right">{{track.duration_ms}}</p> -->
+      </div>
+    </div>
+  </div>
+

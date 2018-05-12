@@ -1,0 +1,39 @@
+.album-header {
+  padding: 20px;
+}
+
+.album-thumb {
+  width: 150px;
+  height: auto;
+  margin: 0 20px 10px 0;
+}
+
+.btn-yellow {
+  background: rgb(245, 231, 44);
+  color: black;
+  border: 1px solid #ddd;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+  border: 1px solid red;
+  color: red;
+  background-color: #f5f5f5;
+}
+
+.well {
+  background-color: rgb(245, 231, 44);
+}
+
+.well > h4,
+.well > a,
+.duration {
+  color: black;
+}
+
+.well > a:hover {
+  color: red;
+}
