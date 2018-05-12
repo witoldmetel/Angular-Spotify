@@ -1,0 +1,16 @@
+.btn-yellow {
+  background: rgb(245, 231, 44);
+  color: black;
+  border: 1px solid #ddd;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  margin: 10px;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+  border: 1px solid red;
+  color: red;
+  background-color: #f5f5f5;
+}
