@@ -4,15 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 import { accessToken } from '../../model/AccessToken';
 
 @Component({
-  selector: 'app-artist',
-  templateUrl: './artist.component.html',
-  styleUrls: ['./artist.component.css']
+  selector: 'app-album',
+  templateUrl: './album.component.html',
+  styleUrls: ['./album.component.css']
 })
-export class ArtistComponent implements OnInit {
+export class AlbumComponent implements OnInit {
   accessToken: string;
   id: string;
-  artist: any;
-  albums: any;
+  album: any;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -22,20 +21,14 @@ export class ArtistComponent implements OnInit {
 
     this.route.params
       .subscribe(params => {
-        spotify.getArtist(params['id'])
+        console.log(params);
+        spotify.getAlbum(params['id'])
           .then(res => {
-            this.artist = res;
-            // console.log(this.artist);
+            this.album = res;
+            console.log(this.album);
           })
           .catch(err => console.error(err));
-
-        spotify.getArtistAlbums(params['id'])
-          .then(res => {
-            this.albums = res.items;
-            // console.log(this.albums);
-            })
-            .catch(err => console.error(err));
-      });
+      })
   }
 
 }

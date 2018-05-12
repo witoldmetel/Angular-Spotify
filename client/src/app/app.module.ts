@@ -11,6 +11,7 @@ import { SearcherComponent } from './components/searcher/searcher.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumComponent } from './components/album/album.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ArtistComponent } from './components/artist/artist.component';
     NavbarComponent,
     AboutComponent,
     SearcherComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
