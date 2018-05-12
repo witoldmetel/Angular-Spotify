@@ -1,5 +1,9 @@
+.navbar {
+    margin-bottom: 0;
+}
+
 .navbar-default {
-    color: rgb(255, 67, 49);
+    /* color: rgb(255, 67, 49); */
     background-color: rgb(245, 231, 44);
 }
 
@@ -12,6 +16,12 @@
     margin-right: 0.5rem;
 }
 
-.navbar-brand {
-    color: red;
+.navbar-header .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  color: black;
+}
+
+.navbar-header .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover {
+  color: red;
 }

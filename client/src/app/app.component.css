@@ -1,0 +1,9 @@
+* {
+    font-family: 'Merriweather', serif;
+}
+
+.main {
+    color: rgb(245, 231, 44);
+    background-color: #191414;
+    min-height: 100vh;
+}

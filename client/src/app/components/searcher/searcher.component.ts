@@ -16,14 +16,18 @@ export class SearcherComponent implements OnInit {
   constructor() { }
 
   searchMusic() {
-    let spotify = new SpotifyWebApi();
-    spotify.setAccessToken(accessToken);
-    spotify.searchArtists(this.searcher, { limit: 40 })
-      .then(res => {
+    if (this.searcher !== '') {
+      let spotify = new SpotifyWebApi();
+      spotify.setAccessToken(accessToken);
+      spotify.searchArtists(this.searcher, { limit: 40 })
+        .then(res => {
           // console.log(res.artists.items);
           this.searchRes = res.artists.items
-      })
-      .catch(err => console.error(err));
+        })
+        .catch(err => console.error(err));
+    } else {
+      this.searchRes = [];
+    }
   }
 
   ngOnInit() {

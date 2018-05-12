@@ -2,16 +2,27 @@
     margin-bottom: 15px;
     overflow: auto;
     max-height: 205px;
-    color: rgb(255, 67, 49);
     background-color: rgb(245, 231, 44);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.pull-left {
-    max-width: 60%;
+.list-group-item:hover {
+  border: 1px solid red;
+}
+
+.list-group-item:hover .list-group-item-heading {
+    color: red;
 }
 
 .list-group-item-heading {
     overflow: hidden;
+    margin-right: 10px;
+}
+
+.pull-left {
+  max-width: 60%;
 }
 
 .pull-right {
