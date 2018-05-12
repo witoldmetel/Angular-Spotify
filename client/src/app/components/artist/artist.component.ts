@@ -25,14 +25,14 @@ export class ArtistComponent implements OnInit {
         spotify.getArtist(params['id'])
           .then(res => {
             this.artist = res;
-            // console.log(this.artist);
+            console.log(this.artist);
           })
           .catch(err => console.error(err));
 
         spotify.getArtistAlbums(params['id'])
           .then(res => {
             this.albums = res.items;
-            console.log(this.albums);
+            // console.log(this.albums);
           })
           .catch (err => console.error(err));
       });
